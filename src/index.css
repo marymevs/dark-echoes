@@ -1,0 +1,39 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: black;
+  color: white;
+  width: 100%;
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  margin: 30px;
+}
+
+main {
+  display: flex;
+  margin: 30px;
+  gap: 30px;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+li {
+  border-bottom: 0.5px lightgray solid;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
