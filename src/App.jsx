@@ -5,6 +5,7 @@ export default function App() {
   const [episodes] = useState(episodeList);
   const [selectedEpisode, setSelectedEpisode] = useState();
 
+  /** Details about the selected episode */
   function EpisodeDetails() {
     if (!selectedEpisode) {
       return (
@@ -31,15 +32,23 @@ export default function App() {
     );
   }
 
+  /** A list of episode names that allows the user to select an episode */
   function Episodes() {
     return (
-      <ul>
-        {episodes.map((episode) => (
-          <li key={episode.id} onClick={() => setSelectedEpisode(episode)}>
-            {episode.title}
-          </li>
-        ))}
-      </ul>
+      <section className="epList">
+        <h2>Episodes</h2>
+        <ul>
+          {episodes.map((episode) => (
+            <li
+              key={episode.id}
+              onClick={() => setSelectedEpisode(episode)}
+              className={selectedEpisode?.id === episode.id ? "selected" : ""}
+            >
+              {episode.title}
+            </li>
+          ))}
+        </ul>
+      </section>
     );
   }
 
